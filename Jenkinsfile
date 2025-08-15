@@ -27,7 +27,7 @@ pipeline {
                         echo "Hello Build"
                         sleep 10
                         env
-                        echo "Hello ${params.PASSWORD}"
+                        echo "Hello ${params.PERSON}"
                     """
                 }                
             }
