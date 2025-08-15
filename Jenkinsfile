@@ -1,28 +1,34 @@
 pipeline {
     agent   {
-        label 'AGENT-1'
+        label 'AGENT-1' 
     }
 
     // Build
     stages {
         stage('Build') {
             steps {
-                echo 'Building..'
+                script{ //this 3 scripts added at 3rd time
+                    echo 'Building..'
+                }                
             }
         }
         stage('Test') {
             steps {
-                echo 'Testing..'
+                script{
+                    echo 'Testing..'
+                }
             }
         }
         stage('Deploy') {
             steps {
-                echo 'Deploying....'
+                script{
+                    echo 'Deploying....'
+                }
             }
         }
     }
 
-    post {
+    post { //this is added 2nd 
         always {
             echo 'I will always say Hello again!'
             deleteDir()
