@@ -25,7 +25,8 @@ pipeline {
                     //echo 'Building..'
                     sh """
                         echo "Hello Build"
-                        echo " hii mawa" 
+                        echo " hii mawa"
+                        echo "em mawa mandala" 
                         sleep 10
                         env
                         echo "Hello ${params.PERSON}"
