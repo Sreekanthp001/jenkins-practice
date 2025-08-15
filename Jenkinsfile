@@ -2,8 +2,11 @@ pipeline {
     agent   {
         label 'AGENT-1' 
     }
-    environment {
+    environment { // this one and 15th to 18th line added 4th time
         COURSE = "jenkins"
+    }
+    options {
+        timeout(time: 30, unit: 'MINUTES')
     }
 
     // Build
@@ -14,6 +17,7 @@ pipeline {
                     //echo 'Building..'
                     sh """
                         echo "Hello Build"
+                        sleep 10
                         env
                     """
                 }                
