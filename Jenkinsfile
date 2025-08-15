@@ -5,8 +5,9 @@ pipeline {
     environment { // this one and 15th to 18th line added 4th time
         COURSE = "jenkins"
     }
-    options {
+    options {//this one 5th added
         timeout(time: 30, unit: 'MINUTES')
+        disableConcurrentBuilds()
     }
 
     // Build
