@@ -2,13 +2,20 @@ pipeline {
     agent   {
         label 'AGENT-1' 
     }
+    environment {
+        COURSE = "jenkins"
+    }
 
     // Build
     stages {
         stage('Build') {
             steps {
                 script{ //this 3 scripts added at 3rd time
-                    echo 'Building..'
+                    //echo 'Building..'
+                    sh """
+                        echo "Hello Build"
+                        env
+                    """
                 }                
             }
         }
