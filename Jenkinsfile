@@ -104,7 +104,7 @@ pipeline {
                         echo "Hello Build"
                         sleep 10 
                         env
-                        echo "Sreekanth mawa"
+                        echo "Sreekanth mawa" 
                         echo "Hello ${params.PERSON}"
                     """
                 }
