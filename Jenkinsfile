@@ -79,6 +79,12 @@ pipeline {
     agent  {
         label 'AGENT-1'
     }
+    environment {
+        COURSE = 'jenkins'
+    }
+    options {
+        timeout(time: 1, unit: 'SECONDS')
+    }
     //Build
     stages {
         stage('Build') {
