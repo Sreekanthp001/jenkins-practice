@@ -84,7 +84,10 @@ pipeline {
         stage('Build') {
             steps {
                 script{
-                    echo 'Building..'
+                    sh """
+                        echo "Hello Build"
+                        env
+                    """
                 }
             }
         }
